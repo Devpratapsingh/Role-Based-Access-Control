@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "13f9",
+      "name": "Dev pratap",
+      "email": "Devpratap0987@gmail.com",
+      "password": "123456",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "2574",
+      "name": "Deepak",
+      "email": "deepak@gmail.com",
+      "password": "123456",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "c355",
+      "name": "ABC",
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "role": "User",
+      "status": "Active"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": [
+        "read",
+        "edit",
+        "delete"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "User",
+      "permissions": [
+        "read only"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "1",
+      "name": "read"
+    },
+    {
+      "id": "2",
+      "name": "write"
+    },
+    {
+      "id": "3",
+      "name": "delete"
+    }
+  ]
+}
