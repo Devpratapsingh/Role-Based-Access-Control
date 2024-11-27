@@ -19,6 +19,8 @@ const Login = () => {
     try {
       // Fetch users from the mock API
       const response = await axiosInstance.get("/users");
+      console.log("response", response);
+
       const users = response.data;
 
       // Check credentials
