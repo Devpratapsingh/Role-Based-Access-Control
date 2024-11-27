@@ -37,6 +37,7 @@
   #### npm install react-router-dom
   #### npm install -g json-server
   #### npm install tailwindcss
+  #### npm install react-icons
 
 # Starting the Mock API Server
   #### json-server --watch db.json --port 3000
