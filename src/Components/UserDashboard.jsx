@@ -11,7 +11,7 @@ const UserDashboard = () => {
     // If no token or role is found, redirect to login
     const token = localStorage.getItem("token");
     const userRole = localStorage.getItem("role");
-
+    const Email = localStorage.getItem("email");
     if (!token) {
       navigate("/login");
       return;
@@ -26,8 +26,10 @@ const UserDashboard = () => {
     axiosInstance
       .get("/users")
       .then((response) => {
-        const loggedInUser = response.data.find((u) => u.role === userRole);
-
+        const loggedInUser = response.data.find(
+          (u) => u.role === userRole && u.email == Email
+        );
+        console.log(response);
         if (loggedInUser) {
           setUser(loggedInUser);
         } else {
@@ -40,11 +42,11 @@ const UserDashboard = () => {
       });
   }, [navigate]);
 
-   const logout = () => {
-      localStorage.removeItem("token");
-      localStorage.removeItem("role");
-      navigate("/"); // Redirect to login page
-    };
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    navigate("/"); // Redirect to login page
+  };
 
   return (
     <>

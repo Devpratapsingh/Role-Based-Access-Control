@@ -32,7 +32,7 @@ const Login = () => {
         // Store user info in localStorage (or sessionStorage)
         localStorage.setItem("token", "dummy-token"); // Save JWT token if needed
         localStorage.setItem("role", user.role);
-
+        localStorage.setItem("email",user.email);
         // Redirect based on role
         if (user.role === "Admin") {
           navigate("/admin");
